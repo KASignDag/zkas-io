@@ -1,0 +1,32 @@
+name: Snapshot current ZKAS.io
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download current live site
+        run: |
+          curl --fail --silent --show-error --location https://zkas.io/ -o index.html
+          curl --fail --silent --show-error --location https://zkas.io/styles.css -o styles.css
+          curl --fail --silent --show-error --location https://zkas.io/script.js -o script.js
+
+      - name: Save snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html styles.css script.js
+          if git diff --cached --quiet; then
+            echo "No site changes to save."
+          else
+            git commit -m "Save current live ZKAS.io site"
+            git push
+          fi
