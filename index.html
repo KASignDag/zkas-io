@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ZKAS is a private-by-default proof-of-work BlockDAG using Orchard/Halo 2 privacy and kHeavyHash merged mining." />
+  <title>ZKAS | Private by default</title>
+  <link rel="icon" href="https://zkas.info/logo-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="https://zkas.info/logo-180.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="ZKAS home">
+      <img class="brand-logo" src="https://zkas.info/logo.png" alt="ZKAS official logo" />
+      <span>ZKAS</span>
+    </a>
+
+    <button class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#get-started">Get Started</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#wallet">Wallets</a>
+      <a href="#mining">Mining</a>
+      <a href="#build">Build</a>
+      <a href="#network">Network</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">PROOF-OF-WORK • BLOCKDAG • PRIVATE BY DEFAULT</p>
+        <h1>Private by default.<br><span>One<span class="hero-hyphen">-</span>second speed.</span></h1>
+        <p class="hero-lede">ZKAS combines a Kaspa-derived GHOSTDAG BlockDAG with Orchard shielded transactions, so payments are private by construction while the network targets one-second blocks.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about">Explore ZKAS</a>
+          <a class="btn btn-secondary" href="https://services.zkas.info/?filter=store" target="_blank" rel="noopener">Get a wallet ↗</a>
+        </div>
+      </div>
+
+      <div class="dag-visual reveal">
+        <div class="dag-topnote" aria-hidden="true">Shielded blocks propagating in real time</div>
+        <div class="dag-card" aria-label="Animated ZKAS BlockDAG illustration">
+          <div class="dag-grid"></div>
+          <canvas id="dagCanvas" class="dag-canvas" aria-hidden="true"></canvas>
+          <div class="dag-center-orb" aria-hidden="true">
+            <div class="dag-center-ring ring-a"></div>
+            <div class="dag-center-ring ring-b"></div>
+            <div class="dag-center-core"></div>
+          </div>
+        </div>
+        <div class="dag-caption dag-caption-below">
+          <span class="pulse-dot"></span>
+          <span>Mainnet live since July 26, 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section shell about-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">ABOUT ZKAS</p>
+        <h2>A private-by-default proof-of-work BlockDAG.</h2>
+        <p>ZKAS combines a Kaspa-derived GHOSTDAG consensus engine with Orchard shielded transactions and Halo 2 zero-knowledge proofs. The result is a network designed for private transfers at a one-second block target, secured by kHeavyHash proof of work and merge-mineable alongside Kaspa.</p>
+      </div>
+      <div class="facts-strip reveal" aria-label="ZKAS protocol facts">
+        <div><span>Consensus</span><strong>GHOSTDAG BlockDAG</strong></div>
+        <div><span>Privacy</span><strong>Orchard + Halo 2</strong></div>
+        <div><span>Mining</span><strong>kHeavyHash</strong></div>
+        <div><span>Block target</span><strong>~1 second</strong></div>
+        <div><span>Launch</span><strong>No premine</strong></div>
+      </div>
+      <div class="about-grid">
+        <article class="about-card reveal">
+          <span class="feature-num">01</span>
+          <h3>Shielded from the start</h3>
+          <p>Every normal transfer is shielded. Amounts, sender and recipient are hidden by construction rather than through an optional privacy mode.</p>
+        </article>
+        <article class="about-card reveal">
+          <span class="feature-num">02</span>
+          <h3>Parallel proof of work</h3>
+          <p>Blocks form a DAG instead of a single chain. GHOSTDAG orders parallel blocks into one accepted history while maintaining proof-of-work security.</p>
+        </article>
+        <article class="about-card reveal">
+          <span class="feature-num">03</span>
+          <h3>Open and verifiable</h3>
+          <p>The protocol, node software and monetary rules are public. ZKAS launched without a presale, founder allocation or spendable genesis premine.</p>
+        </article>
+      </div>
+      <div class="cta-row reveal">
+        <a class="btn btn-secondary" href="https://zkas.info/whitepaper.html" target="_blank" rel="noopener">Read the technical whitepaper ↗</a>
+      </div>
+    </section>
+
+    <section id="get-started" class="section shell get-started-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">GET STARTED</p>
+        <h2>From zero to your first ZKAS in four steps.</h2>
+        <p>Start with official resources, keep custody of your seed phrase, and verify addresses and software before moving meaningful funds.</p>
+      </div>
+      <div class="start-flow">
+        <article class="start-step reveal">
+          <span class="start-number">01</span>
+          <div><h3>Choose a wallet</h3><p>Pick an official or self-hosted wallet option that matches your device and custody preference.</p></div>
+          <a href="https://services.zkas.info/?filter=store" target="_blank" rel="noopener">Wallets ↗</a>
+        </article>
+        <article class="start-step reveal">
+          <span class="start-number">02</span>
+          <div><h3>Back up your seed</h3><p>Write down your recovery phrase and store it offline. Never share it with a website, bot, exchange or support account.</p></div>
+          <span class="start-tag">Self custody</span>
+        </article>
+        <article class="start-step reveal">
+          <span class="start-number">03</span>
+          <div><h3>Get ZKAS</h3><p>Mine through a supported pool, merge-mine with Kaspa, or use a currently supported market or community service.</p></div>
+          <a href="https://services.zkas.info/?filter=earn" target="_blank" rel="noopener">Mining options ↗</a>
+        </article>
+        <article class="start-step reveal">
+          <span class="start-number">04</span>
+          <div><h3>Verify the network</h3><p>Use the BlockDAG explorer to inspect blocks and public network data while transaction details remain shielded.</p></div>
+          <a href="https://explorer.zkas.info" target="_blank" rel="noopener">Explorer ↗</a>
+        </article>
+      </div>
+      <div class="safety-note reveal"><strong>First transaction?</strong><span>Send a small test amount first, confirm receipt, then move more.</span></div>
+    </section>
+
+    <section id="tokenomics" class="section shell tokenomics-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">TOKENOMICS</p>
+        <h2>Proof-of-work issuance with a perpetual security tail.</h2>
+        <p>ZKAS has no fixed supply cap. Issuance is intentionally front-loaded, then transitions to a perpetual tail emission designed to keep proof-of-work security funded over the long term.</p>
+      </div>
+      <div class="token-hero reveal">
+        <div class="token-metric"><span>Launch issuance</span><strong>60 ZKAS</strong><small>gross per launch block</small></div>
+        <div class="token-metric"><span>Miner share</span><strong>95%</strong><small>57 ZKAS at launch</small></div>
+        <div class="token-metric"><span>Development</span><strong>5%</strong><small>3 ZKAS at launch</small></div>
+        <div class="token-metric"><span>Supply cap</span><strong>None</strong><small>perpetual tail emission</small></div>
+      </div>
+      <div class="token-grid">
+        <article class="token-card reveal">
+          <h3>Emission schedule</h3>
+          <div class="emission-line"><span>Genesis / launch</span><b>60 ZKAS gross</b></div>
+          <div class="emission-line"><span>Decay</span><b>3-month halving</b></div>
+          <div class="emission-line"><span>First tail</span><b>6 ZKAS / block</b></div>
+          <div class="emission-line"><span>Long-term tail</span><b>0.6 ZKAS / block</b></div>
+          <p>The current whitepaper describes the 0.6 ZKAS/block perpetual tail beginning around month 24.</p>
+        </article>
+        <article class="token-card reveal">
+          <h3>Launch fairness</h3>
+          <div class="token-proof"><span>No presale</span><b>✓</b></div>
+          <div class="token-proof"><span>No founder allocation</span><b>✓</b></div>
+          <div class="token-proof"><span>No airdrop</span><b>✓</b></div>
+          <div class="token-proof"><span>Genesis spendable premine</span><b>None</b></div>
+          <p>The genesis coinbase is documented as paying to an unspendable OP_FALSE script, while ongoing miner/development issuance is created block by block under consensus rules.</p>
+        </article>
+      </div>
+      <div class="token-footnote reveal">
+        <span>1 ZKAS = 100,000,000 sompi</span>
+        <span>Ticker: ZKAS</span>
+        <a href="https://zkas.info/whitepaper.html" target="_blank" rel="noopener">Verify monetary policy in the whitepaper ↗</a>
+      </div>
+    </section>
+
+    <section id="discover" class="section shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">DISCOVER</p>
+        <h2>Privacy at settlement speed.</h2>
+        <p>ZKAS is a from-genesis cryptocurrency designed around mandatory shielded transfers, proof-of-work security, and a parallel BlockDAG architecture.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <span class="feature-num">01</span>
+          <h3>Mandatory privacy</h3>
+          <p>Payments use Orchard shielded transactions with Halo 2 proofs. There is no transparent transfer mode.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature-num">02</span>
+          <h3>One-second target</h3>
+          <p>GHOSTDAG orders blocks produced in parallel, with a target of roughly one block per second.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature-num">03</span>
+          <h3>Kaspa merged mining</h3>
+          <p>ZKAS uses kHeavyHash and can be merge-mined alongside Kaspa, allowing the same work to secure both networks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="privacy" class="section section-split shell">
+      <div class="statement reveal">
+        <p class="eyebrow">PRIVACY</p>
+        <h2>Amounts, senders and recipients are hidden by construction.</h2>
+      </div>
+      <div class="copy-card reveal">
+        <p>ZKAS uses Zcash-derived Orchard privacy and Halo 2 zero-knowledge proofs on top of a Kaspa-derived GHOSTDAG engine. The network is designed so private transfers are the standard behavior, not an optional mode.</p>
+        <p class="muted">The protocol is open source. The project states that its novel shielded-state integration has not yet had an independent external audit, so users should verify current software and documentation before moving funds.</p>
+      </div>
+    </section>
+
+    <section id="wallet" class="section shell wallet-hub-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">WALLET & EXCHANGES</p>
+        <h2>Get ZKAS, move it to a wallet you control.</h2>
+        <p>Choose the custody setup that fits how you plan to use ZKAS, then acquire it through a supported market or mining and move it into self-custody.</p>
+      </div>
+
+      <div class="wallet-hub reveal" data-wallet-hub>
+        <div class="wallet-tabs" role="tablist" aria-label="Wallet guide">
+          <button class="wallet-tab active" type="button" role="tab" aria-selected="true" data-wallet-tab="wallet">Wallet</button>
+          <button class="wallet-tab" type="button" role="tab" aria-selected="false" data-wallet-tab="buy">Exchanges</button>
+          <button class="wallet-tab" type="button" role="tab" aria-selected="false" data-wallet-tab="transfer">Transfer</button>
+          <button class="wallet-tab" type="button" role="tab" aria-selected="false" data-wallet-tab="help">Help</button>
+        </div>
+
+        <div class="wallet-panel active" data-wallet-panel="wallet">
+          <div class="wallet-panel-head">
+            <span class="wallet-step-num">01</span>
+            <div><h3>Choose your ZKAS wallet</h3><p>All official wallet options are non-custodial. The difference is where the keys live and how much control you want.</p></div>
+          </div>
+          <div class="wallet-option-grid">
+            <a class="wallet-option" href="https://wallet.zkas.info" target="_blank" rel="noopener">
+              <span class="wallet-icon">WEB</span><div><h4>Web Wallet</h4><p>Fastest way to get started from a browser or phone.</p><small>Non-custodial · easiest access</small></div><b>↗</b>
+            </a>
+            <a class="wallet-option featured" href="https://github.com/firecash/zkas-wallet/releases" target="_blank" rel="noopener">
+              <span class="wallet-icon">APP</span><div><h4>Light Wallet</h4><p>Local-key wallet app for stronger everyday custody.</p><small>Self-custody · local keys</small></div><b>↗</b>
+            </a>
+            <a class="wallet-option" href="https://github.com/firecash/zkas-rusty#wallet" target="_blank" rel="noopener">
+              <span class="wallet-icon">CLI</span><div><h4>Self-hosted / CLI</h4><p>Run walletd or shielded-pay locally for maximum control.</p><small>Advanced · self-hosted</small></div><b>↗</b>
+            </a>
+            <a class="wallet-option" href="https://zkas.info/paper-wallet.html" target="_blank" rel="noopener">
+              <span class="wallet-icon">OFF</span><div><h4>Paper Wallet</h4><p>Create keys offline for long-term cold storage.</p><small>Cold storage · offline</small></div><b>↗</b>
+            </a>
+          </div>
+          <div class="wallet-guidance">
+            <div><strong>For everyday use</strong><span>Light Wallet or Web Wallet</span></div>
+            <div><strong>For larger / long-term holdings</strong><span>Local app, self-hosted wallet or paper wallet</span></div>
+          </div>
+        </div>
+
+        <div class="wallet-panel" data-wallet-panel="buy" hidden>
+          <div class="wallet-panel-head">
+            <span class="wallet-step-num">02</span>
+            <div><h3>Exchange access</h3><p>Choose an exchange below. Clicking a logo opens that exchange's ZKAS / USDT market directly.</p></div>
+          </div>
+
+          <div class="exchange-logo-grid" aria-label="ZKAS exchanges">
+            <a class="exchange-logo-tile" href="https://neoxa.exchange/trade/ZKAS_USDT" target="_blank" rel="noopener" aria-label="Trade ZKAS on NeoxEX">
+              <img src="https://neoxa.exchange/favicon.ico" alt="NeoxEX" />
+              <span>NeoxEX</span>
+            </a>
+            <a class="exchange-logo-tile" href="https://noirtrade.com/trade?pair=ZKAS_USDT" target="_blank" rel="noopener" aria-label="Trade ZKAS on NoirTrade">
+              <img src="https://noirtrade.com/logo.png" alt="NoirTrade" />
+              <span>NoirTrade</span>
+            </a>
+            <a class="exchange-logo-tile" href="https://arrrex.com/app/trade?market=ZKAS-USDT" target="_blank" rel="noopener" aria-label="Trade ZKAS on ARRREX">
+              <img src="https://arrrex.com/og.svg" alt="ARRREX" />
+              <span>ARRREX</span>
+            </a>
+            <a class="exchange-logo-tile" href="https://nonkyc.io/market/ZKAS_USDT" target="_blank" rel="noopener" aria-label="View ZKAS on NonKYC">
+              <img src="https://nonkyc.io/images/logo-yellow-header-micon.png" alt="NonKYC" />
+              <span>NonKYC</span>
+            </a>
+          </div>
+
+          <div class="otc-access">
+            <div>
+              <strong>ZKAS OTC</strong>
+              <span>View the shared ZKAS OTC order book, completed trades and live offers.</span>
+            </div>
+            <a class="btn btn-secondary" href="https://zkas.stream/#otc" target="_blank" rel="noopener">Open ZKAS OTC ↗</a>
+          </div>
+
+          <div class="exchange-note"><strong>Before trading:</strong> verify the pair, deposit and withdrawal status, and send a small test amount first. Exchange availability and regional access are controlled by each platform.</div>
+        </div>
+
+        <div class="wallet-panel" data-wallet-panel="transfer" hidden>
+          <div class="wallet-panel-head">
+            <span class="wallet-step-num">03</span>
+            <div><h3>Take custody of your ZKAS</h3><p>Once you have ZKAS on a market, move it to your shielded wallet rather than leaving meaningful funds on an exchange.</p></div>
+          </div>
+          <div class="transfer-flow">
+            <article><span>STEP 01</span><h4>Get your receive address</h4><p>Open your ZKAS wallet, choose Receive, and copy your shielded address.</p></article>
+            <article class="accent"><span>STEP 02</span><h4>Send a test amount</h4><p>Withdraw a small amount first and confirm it arrives before moving more.</p></article>
+            <article><span>STEP 03</span><h4>Transfer the balance</h4><p>After the test clears, withdraw the remaining amount you want in self-custody.</p></article>
+          </div>
+          <div class="transfer-line" aria-hidden="true"><span></span><i>→</i><span></span></div>
+        </div>
+
+        <div class="wallet-panel" data-wallet-panel="help" hidden>
+          <div class="wallet-panel-head">
+            <span class="wallet-step-num">04</span>
+            <div><h3>Keep the basics simple</h3><p>Most losses happen around custody, wrong addresses, fake support and rushed transfers—not the protocol itself.</p></div>
+          </div>
+          <div class="help-grid">
+            <article><h4>Back up the seed</h4><p>Store your recovery phrase offline. Never type it into support chats, forms or exchange websites.</p></article>
+            <article><h4>Check the address</h4><p>Compare the first and last characters before approving a withdrawal.</p></article>
+            <article><h4>Use official links</h4><p>Open wallets and tools from ZKAS official resources rather than unsolicited messages or ads.</p></article>
+            <article><h4>Test first</h4><p>A small test transaction is the safest way to verify the route before moving more.</p></article>
+          </div>
+          <div class="cta-row"><a class="btn btn-primary" href="https://services.zkas.info/?filter=store" target="_blank" rel="noopener">Open official wallet directory ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mining" class="section shell">
+      <div class="builder-panel reveal">
+        <div>
+          <p class="eyebrow">MINING</p>
+          <h2>Mine with kHeavyHash.</h2>
+          <p>ZKAS supports native proof-of-work and merged mining with Kaspa. Miners can use supported pools or run their own node and mining setup.</p>
+        </div>
+        <div class="builder-links">
+          <a href="https://mining-pool.zkas.info" target="_blank" rel="noopener"><span>Official pool</span><strong>ZKas Pool ↗</strong></a>
+          <a href="https://services.zkas.info/?filter=earn" target="_blank" rel="noopener"><span>Pool directory</span><strong>Mining options ↗</strong></a>
+          <a href="https://github.com/firecash/zkas-rusty" target="_blank" rel="noopener"><span>Self-hosted</span><strong>Run a node ↗</strong></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="build" class="section shell">
+      <div class="builder-panel reveal">
+        <div>
+          <p class="eyebrow">BUILD</p>
+          <h2>Open source by design.</h2>
+          <p>Core software, SDKs, payment tools and technical documentation are available publicly for developers and operators.</p>
+        </div>
+        <div class="builder-links">
+          <a href="https://github.com/firecash/zkas-rusty" target="_blank" rel="noopener"><span>Core source</span><strong>GitHub ↗</strong></a>
+          <a href="https://github.com/firecash/zkas-sdk" target="_blank" rel="noopener"><span>Developer tools</span><strong>ZKAS SDK ↗</strong></a>
+          <a href="https://zkas.info/whitepaper.html" target="_blank" rel="noopener"><span>Protocol</span><strong>Whitepaper ↗</strong></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="network" class="section shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">NETWORK</p>
+        <h2>Verify the network yourself.</h2>
+        <p>Inspect public BlockDAG data while shielded transaction details remain private.</p>
+      </div>
+      <div class="network-card reveal">
+        <div class="network-orb"><img src="https://zkas.info/logo.png" alt="" /></div>
+        <div>
+          <h3>ZKAS BlockDAG Explorer</h3>
+          <p>Blocks, transactions, addresses and network information.</p>
+        </div>
+        <a class="btn btn-secondary" href="https://explorer.zkas.info" target="_blank" rel="noopener">Open explorer ↗</a>
+      </div>
+    </section>
+
+    <section class="section manifesto shell reveal">
+      <p class="eyebrow">ZKAS</p>
+      <h2>No premine. Proof of work from genesis.</h2>
+      <p class="big-copy">ZKAS launched with no presale, founder allocation or airdrop. Its genesis coinbase is documented as provably unspendable, with issuance occurring through mining.</p>
+      <div class="cta-row">
+        <a class="btn btn-secondary" href="https://zkas.info/whitepaper.html" target="_blank" rel="noopener">Read the whitepaper ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div class="footer-brand">
+      <img class="brand-logo small-logo" src="https://zkas.info/logo.png" alt="ZKAS official logo" />
+      <strong>ZKAS</strong>
+    </div>
+    <div class="footer-links">
+      <a href="https://zkas.info/" target="_blank" rel="noopener">Official site ↗</a>
+      <a href="https://explorer.zkas.info" target="_blank" rel="noopener">Explorer ↗</a>
+      <a href="https://services.zkas.info/?filter=store" target="_blank" rel="noopener">Wallets ↗</a>
+      <a href="https://github.com/firecash/zkas-rusty" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://discord.gg/6Qd7KQUf7Y" target="_blank" rel="noopener">Discord ↗</a>
+      <a href="https://x.com/Zk_as_" target="_blank" rel="noopener">X ↗</a>
+    </div>
+    <p class="footer-note">This independent ZKAS.io landing page is intended as a community-facing front page for the network and links to official ZKAS resources where appropriate.</p>
+    <div class="site-views" aria-live="polite">
+      <span>Site views</span>
+      <strong id="siteViewCount">—</strong>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
