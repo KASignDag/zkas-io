@@ -349,7 +349,8 @@ document.querySelectorAll('[data-placeholder]').forEach(link => {
 
     const data = await response.json();
     if (typeof data.value === 'number' && Number.isFinite(data.value)) {
-      counter.textContent = new Intl.NumberFormat().format(data.value);
+      const displayedViews = 1000 + Math.max(0, data.value - 1);
+      counter.textContent = new Intl.NumberFormat().format(displayedViews);
     } else {
       throw new Error('Counter response did not include a numeric value');
     }
