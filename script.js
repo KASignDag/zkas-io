@@ -334,24 +334,24 @@ document.querySelectorAll('[data-placeholder]').forEach(link => {
 })();
 
 
-// Cloudflare KV-backed page view counter.
-// Every successful page load increments the total once; repeat visitors can count again.
+// CounterAPI visitor counter, matching the counter used by ZKAS.stream.
+// ZKAS.io keeps its own namespace so each site's total remains independent.
 (async function updateSiteViewCounter() {
   const counter = document.getElementById('siteViewCount');
   if (!counter) return;
 
   try {
-    const response = await fetch('/api/views', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      cache: 'no-store'
+    const response = await fetch('https://counterapi.com/api/zkas.io/view/site-visitors?unique=true', {
+      headers: { Accept: 'application/json' },
     });
 
     if (!response.ok) throw new Error(`Counter returned ${response.status}`);
 
     const data = await response.json();
-    if (typeof data.views === 'number' && Number.isFinite(data.views)) {
-      counter.textContent = new Intl.NumberFormat().format(data.views);
+    if (typeof data.value === 'number' && Number.isFinite(data.value)) {
+      counter.textContent = new Intl.NumberFormat().format(data.value);
+    } else {
+      throw new Error('Counter response did not include a numeric value');
     }
   } catch (error) {
     console.warn('Site view counter unavailable:', error);
