@@ -256,6 +256,21 @@ h1 span { color: transparent; background: linear-gradient(90deg, var(--cyan), #d
   font-weight:700;
   letter-spacing:.02em;
 }
+.market-trackers{
+  margin-top:18px;
+  padding:16px 18px;
+  display:flex;
+  align-items:center;
+  gap:10px 16px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(147,242,255,.025);
+}
+.market-trackers>strong{color:#eaf9fb;font-size:14px;white-space:nowrap}
+.market-trackers>span{color:#78919b;font-size:12px}
+.market-tracker-links{margin-left:auto;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+.market-tracker-links a{padding:8px 11px;border:1px solid rgba(147,242,255,.2);border-radius:999px;color:var(--cyan);font-size:12px;font-weight:750;background:rgba(147,242,255,.035)}
+.market-tracker-links a:hover{border-color:rgba(147,242,255,.48);background:rgba(147,242,255,.075)}
 .otc-access{
   margin-top:18px;
   padding:18px 20px;
@@ -279,6 +294,8 @@ h1 span { color: transparent; background: linear-gradient(90deg, var(--cyan), #d
   .exchange-logo-grid{grid-template-columns:1fr}
   .exchange-logo-tile{border-right:0;border-bottom:1px solid var(--line)}
   .exchange-logo-tile:last-child{border-bottom:0}
+  .market-trackers{align-items:flex-start;flex-direction:column}
+  .market-tracker-links{width:100%;margin-left:0;justify-content:flex-start}
   .otc-access{align-items:flex-start;flex-direction:column}
 }
 
