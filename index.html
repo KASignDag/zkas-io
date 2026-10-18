@@ -19,7 +19,6 @@
       <span>ZKAS</span>
     </a>
 
-    <button class="menu-button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#get-started">Get Started</a>
@@ -30,13 +29,46 @@
       <a href="#build">Build</a>
       <a href="#network">Network</a>
     </nav>
+    <div class="header-controls">
+      <label class="language-picker" data-no-i18n>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></svg>
+        <select id="siteLanguage" aria-label="Language">
+          <option value="en" lang="en">English</option>
+          <option value="es" lang="es">Español</option>
+          <option value="pt" lang="pt">Português</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="it" lang="it">Italiano</option>
+          <option value="nl" lang="nl">Nederlands</option>
+          <option value="pl" lang="pl">Polski</option>
+          <option value="uk" lang="uk">Українська</option>
+          <option value="ru" lang="ru">Русский</option>
+          <option value="tr" lang="tr">Türkçe</option>
+          <option value="ar" lang="ar">العربية</option>
+          <option value="fa" lang="fa">فارسی</option>
+          <option value="ur" lang="ur">اردو</option>
+          <option value="hi" lang="hi">हिन्दी</option>
+          <option value="bn" lang="bn">বাংলা</option>
+          <option value="id" lang="id">Bahasa Indonesia</option>
+          <option value="vi" lang="vi">Tiếng Việt</option>
+          <option value="th" lang="th">ไทย</option>
+          <option value="zh" lang="zh">简体中文</option>
+          <option value="zh-TW" lang="zh-TW">繁體中文</option>
+          <option value="ja" lang="ja">日本語</option>
+          <option value="ko" lang="ko">한국어</option>
+          <option value="fil" lang="fil">Filipino</option>
+        </select>
+      </label>
+      <button class="menu-button" aria-expanded="false" aria-controls="site-nav"><svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="menu-label">Menu</span></button>
+    </div>
+    <p id="languageStatus" class="language-status" role="status" data-no-i18n></p>
   </header>
 
   <main id="top">
     <section class="hero shell">
       <div class="hero-copy reveal">
         <p class="eyebrow">PROOF-OF-WORK • BLOCKDAG • PRIVATE BY DEFAULT</p>
-        <h1>Private by default.<br><span>One<span class="hero-hyphen">-</span>second speed.</span></h1>
+        <h1>Private by default.<br><span>One-second speed.</span></h1>
         <p class="hero-lede">ZKAS combines a Kaspa-derived GHOSTDAG BlockDAG with Orchard shielded transactions, so payments are private by construction while the network targets one-second blocks.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#about">Explore ZKAS</a>
@@ -67,7 +99,7 @@
         <div><p class="eyebrow">NETWORK UPGRADE</p><h2 id="zkrise-title">ZKrise is live.</h2></div>
         <a class="btn btn-secondary" href="https://github.com/firecash/zkas-rusty/releases/tag/zkas-v1.0.11" target="_blank" rel="noopener">Official release ↗</a>
       </div>
-      <p>Activated at mainnet DAA 6,983,500. The 5% development share has ended: miners now receive <strong>100% of the block subsidy</strong>. The issuance schedule is unchanged.</p>
+      <p>Activated at mainnet DAA 6,983,500. The 5% development share has ended: miners now receive 100% of the block subsidy. The issuance schedule is unchanged.</p>
       <details>
         <summary>What changed for miners and wallet users</summary>
         <ul>
@@ -401,6 +433,7 @@
       <a href="https://x.com/ZKas_Stream" target="_blank" rel="noopener">X @ZKas_Stream ↗</a>
     </div>
     <p class="footer-note">This independent ZKAS.io landing page is intended as a community-facing front page for the network and links to official ZKAS resources where appropriate.</p>
+    <p class="footer-note translation-note" id="translationNote" hidden>Translations are generated automatically. Refer to English for the original wording.</p>
     <div class="site-views" aria-live="polite">
       <span>Site views</span>
       <strong id="siteViewCount">—</strong>
@@ -408,5 +441,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="i18n.js"></script>
 </body>
 </html>
+
