@@ -318,3 +318,15 @@ h1 span { color: transparent; background: linear-gradient(90deg, var(--cyan), #d
   font-weight:700;
   font-variant-numeric:tabular-nums;
 }
+
+/* ZKrise network upgrade */
+.zkrise-notice { padding: 28px; border: 2px solid rgba(147,242,255,.5); border-radius: 18px; background: linear-gradient(135deg, rgba(85,223,243,.09), rgba(168,146,255,.06)); }
+.zkrise-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.zkrise-heading .eyebrow { margin-bottom: 10px; }
+.zkrise-heading h2 { margin: 0; font-size: clamp(26px, 4vw, 36px); letter-spacing: -.03em; }
+.zkrise-notice p, .zkrise-notice li { color: var(--muted); line-height: 1.75; font-size: 15px; }
+.zkrise-notice strong { color: var(--text); }
+.zkrise-notice summary { cursor: pointer; color: var(--cyan); font-weight: 700; line-height: 1.6; }
+.zkrise-notice ul { padding-left: 22px; }
+.zkrise-notice li { margin: 10px 0; }
+@media (max-width: 640px) { .zkrise-notice { padding: 22px; } .zkrise-heading { align-items: flex-start; flex-direction: column; gap: 16px; } }
