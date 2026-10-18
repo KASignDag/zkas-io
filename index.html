@@ -62,6 +62,24 @@
       </div>
     </section>
 
+    <section id="zkrise" class="shell zkrise-notice" aria-labelledby="zkrise-title">
+      <div class="zkrise-heading">
+        <div><p class="eyebrow">NETWORK UPGRADE</p><h2 id="zkrise-title">ZKrise is live.</h2></div>
+        <a class="btn btn-secondary" href="https://github.com/firecash/zkas-rusty/releases/tag/zkas-v1.0.11" target="_blank" rel="noopener">Official release ↗</a>
+      </div>
+      <p>Activated at mainnet DAA 6,983,500. The 5% development share has ended: miners now receive <strong>100% of the block subsidy</strong>. The issuance schedule is unchanged.</p>
+      <details>
+        <summary>What changed for miners and wallet users</summary>
+        <ul>
+          <li><strong>Bound merged mining:</strong> ZKM1 binds each solution to one ZKas block, closing the double-mining hole.</li>
+          <li><strong>Batched rewards:</strong> miner rewards accumulate into one note roughly every 100 DAA scores, or when the payout script changes.</li>
+          <li><strong>Stronger security:</strong> anchor-block checks, expanded state commitments, verified shielded-history sync and RPC hardening.</li>
+          <li><strong>Wallet performance:</strong> Zakura 2.2.0, improved note selection and faster wallet processing.</li>
+        </ul>
+        <p>Use ZKrise-compatible node, bridge and wallet software. Operators should follow the official release instructions and confirm their node’s virtual DAA score keeps advancing.</p>
+      </details>
+    </section>
+
     <section id="about" class="section shell about-section">
       <div class="section-heading reveal">
         <p class="eyebrow">ABOUT ZKAS</p>
@@ -136,8 +154,8 @@
       </div>
       <div class="token-hero reveal">
         <div class="token-metric"><span>Launch issuance</span><strong>60 ZKAS</strong><small>gross per launch block</small></div>
-        <div class="token-metric"><span>Miner share</span><strong>95%</strong><small>57 ZKAS at launch</small></div>
-        <div class="token-metric"><span>Development</span><strong>5%</strong><small>3 ZKAS at launch</small></div>
+        <div class="token-metric"><span>Miner share</span><strong>100%</strong><small>full subsidy since ZKrise</small></div>
+        <div class="token-metric"><span>Development</span><strong>0%</strong><small>development share ended at ZKrise</small></div>
         <div class="token-metric"><span>Supply cap</span><strong>None</strong><small>perpetual tail emission</small></div>
       </div>
       <div class="token-grid">
@@ -155,7 +173,7 @@
           <div class="token-proof"><span>No founder allocation</span><b>✓</b></div>
           <div class="token-proof"><span>No airdrop</span><b>✓</b></div>
           <div class="token-proof"><span>Genesis spendable premine</span><b>None</b></div>
-          <p>The genesis coinbase is documented as paying to an unspendable OP_FALSE script, while ongoing miner/development issuance is created block by block under consensus rules.</p>
+          <p>The genesis coinbase is documented as paying to an unspendable OP_FALSE script, and issuance is created through proof of work under consensus rules. The historical launch split was 57 ZKAS to miners and 3 ZKAS to development per 60 ZKAS block; the development share ended at mainnet DAA 6,983,500.</p>
         </article>
       </div>
       <div class="token-footnote reveal">
@@ -314,7 +332,7 @@
         <div>
           <p class="eyebrow">MINING</p>
           <h2>Mine with kHeavyHash.</h2>
-          <p>ZKAS supports native proof-of-work and merged mining with Kaspa. Miners can use supported pools or run their own node and mining setup.</p>
+          <p>ZKAS supports native proof-of-work and merged mining with Kaspa. Miners can use supported pools or run their own node and mining setup. Since ZKrise, miners receive the full block subsidy; pool service fees, if any, are separate. Operators need a ZKrise-compatible bridge for bound ZKM1 merged mining.</p>
         </div>
         <div class="builder-links">
           <a href="https://mining-pool.zkas.info" target="_blank" rel="noopener"><span>Official pool</span><strong>ZKas Pool ↗</strong></a>
